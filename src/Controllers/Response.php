@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Parkwayprojects\PayWithBank3D\Controllers;
-
 
 class Response
 {

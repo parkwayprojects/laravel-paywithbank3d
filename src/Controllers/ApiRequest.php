@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Parkwayprojects\PayWithBank3D\Controllers;
-
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Config;
@@ -29,7 +27,8 @@ abstract class ApiRequest
         $this->prepareRequest();
     }
 
-    public function setUrl(){
+    public function setUrl()
+    {
         $this->baseUrl = Config::get('paywithbank3d.mode') === 'test' ? Config::get('paywithbank3d.testUrl') : Config::get('paywithbank3d.liveURL');
     }
 
@@ -41,15 +40,15 @@ abstract class ApiRequest
 
     protected function checkConstant()
     {
-        if(!$this->secretKey){
+        if (! $this->secretKey) {
             throw CouldNotProcess::notSetSecretKey();
         }
 
-        if(!$this->publicKey){
+        if (! $this->publicKey) {
             throw CouldNotProcess::notSetPublicKey();
         }
 
-        if(!$this->baseUrl){
+        if (! $this->baseUrl) {
             throw CouldNotProcess::notSetUrl();
         }
     }
