@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Facade;
  * @method static setUrl(array $data)
  * @method static mixed redirectNow()
  * @method static mixed getData()
-
  */
 class PayWithBank3DFacade extends Facade
 {

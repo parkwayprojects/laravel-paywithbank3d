@@ -7,7 +7,6 @@ use Parkwayprojects\LaravelPaywithbank3d\PayWithBank3DServiceProvider;
 
 class ExampleTest extends TestCase
 {
-
     protected function getPackageProviders($app)
     {
         return [PayWithBank3DServiceProvider::class];
