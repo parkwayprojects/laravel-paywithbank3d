@@ -1,0 +1,55 @@
+{
+    "name": "parkwayprojects/laravel-paywithbank3d",
+    "description": "A Laravel Package for working with PayWithBank3D",
+    "keywords": [
+        "parkwayprojects",
+        "laravel-paywithbank3d"
+    ],
+    "homepage": "https://github.com/parkwayprojects/laravel-paywithbank3d",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Paul Edward",
+            "email": "infinitypaul@live.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "~5.5|~6.5|^7.0",
+        "guzzlehttp/guzzle": "5.*|6.*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.5|~4.4|^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Parkwayprojects\\PayWithBank3D\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Parkwayprojects\\PayWithBank3D\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Parkwayprojects\\PayWithBank3D\\PayWithBank3DServiceProvider"
+            ],
+            "aliases": {
+                "PayWithBank3D": "Parkwayprojects\\PayWithBank3D\\PayWithBank3DFacade"
+            }
+        }
+    }
+}
