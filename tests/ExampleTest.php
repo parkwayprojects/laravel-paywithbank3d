@@ -3,7 +3,7 @@
 namespace Parkwayprojects\LaravelPaywithbank3d\Tests;
 
 use Orchestra\Testbench\TestCase;
-use Parkwayprojects\LaravelPaywithbank3d\PayWithBank3DServiceProvider;
+use Parkwayprojects\PayWithBank3D\PayWithBank3DServiceProvider;
 
 class ExampleTest extends TestCase
 {

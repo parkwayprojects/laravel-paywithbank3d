@@ -74,7 +74,7 @@ return [
 ```
 
 ## Usage
-Open your .env file and add your PayWithBank3D public key,  PayWithBank3D secret key, PayWithBank3D mode which by default is set to live, live url , and test url like so:
+Open your .env file and add your PayWithBank3D public key,  PayWithBank3D secret key, PayWithBank3D mode which by default is live, live url , and test url like so:
 
 ``` php
 PWB3D_PUBLIC_KEY=****

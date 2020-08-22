@@ -27,6 +27,7 @@ class PayWithBank3D extends ApiRequest
                 'returnUrl' => request()->returnUrl,
                 'color' => request()->color ? request()->color : '#FF0000',
                 'metadata' => request()->metadata,
+                'reference' => ReferenceNumber::getHashedToken()
             ];
         }
         array_filter($data);
