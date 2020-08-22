@@ -19,7 +19,11 @@ class PayWithBank3D extends ApiRequest
             $data = [
                 'amount' => intval(request()->amount),
                 'currencyCode' => request()->currencyCode ? request()->currencyCode : 'NGN',
-                'customer' => request()->customer,
+                'customer' => [
+                    'name' => request()->name,
+                    'email' => request()->email,
+                    'phone' => request()->phone,
+                ],
                 'returnUrl' => request()->returnUrl,
                 'color' => request()->color ? request()->color : '#FF0000',
                 'metadata' => request()->metadata,

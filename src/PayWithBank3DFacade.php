@@ -6,9 +6,10 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \Parkwayprojects\LaravelPaywithbank3d\Skeleton\SkeletonClass
- * @method static setUrl(array $data)
+ * @method static setUrl(array $data=[])
  * @method static mixed redirectNow()
  * @method static mixed getData()
+ * @method static mixed getUrl()
  */
 class PayWithBank3DFacade extends Facade
 {
