@@ -11,13 +11,10 @@ class PayWithBank3DServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
-
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/paywithbank3d.php' => config_path('paywithbank3d.php'),
             ], 'config');
-
         }
     }
 
