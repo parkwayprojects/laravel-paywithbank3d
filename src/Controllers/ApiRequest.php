@@ -21,13 +21,13 @@ abstract class ApiRequest
 
     public function __construct()
     {
-        $this->setUrl();
+        $this->setBaseUrl();
         $this->setConstant();
         $this->checkConstant();
         $this->prepareRequest();
     }
 
-    public function setUrl()
+    public function setBaseUrl()
     {
         $this->baseUrl = Config::get('paywithbank3d.mode') === 'test' ? Config::get('paywithbank3d.testUrl') : Config::get('paywithbank3d.liveURL');
     }
