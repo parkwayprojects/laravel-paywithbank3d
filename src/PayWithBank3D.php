@@ -77,7 +77,6 @@ class PayWithBank3D extends ApiRequest
      */
     public function getData()
     {
-
         if ($this->verifyReference()) {
             return $this->getResponse();
         }
