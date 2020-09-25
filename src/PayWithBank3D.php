@@ -67,7 +67,7 @@ class PayWithBank3D extends ApiRequest
     {
         $reference = request()->query('reference');
         $result = $this->performGetRequest($this->verifyUrl.$reference);
-
+        //dd($result);
         return $result['body']['code'] === '00';
     }
 
@@ -77,9 +77,10 @@ class PayWithBank3D extends ApiRequest
      */
     public function getData()
     {
+
         if ($this->verifyReference()) {
             return $this->getResponse();
         }
-        throw CouldNotProcess::invalidTransaction();
+        throw CouldNotProcess::invalidTransaction($this->getResponse()['body']['description']);
     }
 }

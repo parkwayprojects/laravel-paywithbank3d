@@ -21,8 +21,8 @@ class CouldNotProcess extends Exception
         return new static('Please Your Live Or Test URL Is Not Set In Your .env File');
     }
 
-    public static function invalidTransaction()
+    public static function invalidTransaction($message)
     {
-        return new static('Invalid Transaction');
+        return new static($message);
     }
 }

@@ -192,7 +192,7 @@ PayWithBank3D::setUrl()->redirectNow();
                         'orderId'=> '1234'
                     ]
                 ];
-       return PayWithBank3D::setUrl($data)->redirectNow();
+       return PayWithBank3DFacade::setUrl($data)->redirectNow();
 
 
 /**
