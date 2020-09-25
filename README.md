@@ -204,7 +204,7 @@ PayWithBank3D::getData();
  * This method gets the return the redirect url in the case your frontend is detached from your backend
  * @returns array
  */
-PPayWithBank3D::setUrl()->getUrl();
+PayWithBank3D::setUrl()->getUrl();
 
 ```
 
