@@ -34,6 +34,7 @@ abstract class ApiRequest
 
     public function setConstant()
     {
+
         $this->secretKey = Config::get('paywithbank3d.secretKey');
         $this->publicKey = Config::get('paywithbank3d.publicKey');
     }
@@ -57,7 +58,7 @@ abstract class ApiRequest
     {
         $this->client = new Client([
             'base_uri' => $this->baseUrl,
-            'auth' => [$this->secretKey, $this->publicKey],
+            'auth' => [$this->publicKey, $this->secretKey],
             'headers' => ['Content-Type' => 'application/json', 'Accept' => 'application/json'],
         ]);
     }
