@@ -233,7 +233,6 @@ A sample form will look like so:
 
              <input type="hidden" name="_token" value="{{ csrf_token() }}"> {{-- employ this in place of csrf_field only in laravel 5.0 --}}
 
-
             <p>
               <button class="btn btn-success btn-lg btn-block" type="submit" value="Pay Now!">
               <i class="fa fa-plus-circle fa-lg"></i> Pay Now!
