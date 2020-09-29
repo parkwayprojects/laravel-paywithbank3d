@@ -34,7 +34,6 @@ abstract class ApiRequest
 
     public function setConstant()
     {
-
         $this->secretKey = Config::get('paywithbank3d.secretKey');
         $this->publicKey = Config::get('paywithbank3d.publicKey');
     }
