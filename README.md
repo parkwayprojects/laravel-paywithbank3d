@@ -216,7 +216,7 @@ A sample form will look like so:
           <div class="col-md-8 col-md-offset-2">
             <p>
                 <div>
-                    Infinity Biscuit
+                    Infinity Biscuits
                     ₦ 5,980
                 </div>
             </p>
