@@ -126,7 +126,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use PayWithBank3D;
+use Parkwayprojects\PayWithBank3D\PayWithBank3DFacade;
 
 class PaymentController extends Controller
 {
@@ -137,7 +137,7 @@ class PaymentController extends Controller
      */
     public function redirectToGateway()
     {
-        return PayWithBank3D::setUrl()->redirectNow();
+        return PayWithBank3DFacade::setUrl()->redirectNow();
     }
 
     /**
@@ -146,7 +146,7 @@ class PaymentController extends Controller
      */
     public function redirectUrl()
     {
-        return  PayWithBank3D::getUrl();
+        return  PayWithBank3DFacade::getUrl();
     }
 
     /**
@@ -155,7 +155,7 @@ class PaymentController extends Controller
      */
     public function handleGatewayCallback()
     {
-        $paymentDetails =  PayWithBank3D::getData();
+        $paymentDetails =  PayWithBank3DFacade::getData();
 
         dd($paymentDetails);
         // Now you have the payment details,
@@ -172,7 +172,7 @@ Let me explain the fluent methods this package provides a bit here.
  *  Payment Page. I abstracted all of it, so you don't have to worry about that.
  *  Just eat your cookies while coding!
  */
-PayWithBank3D::setUrl()->redirectNow();
+PayWithBank3DFacade::setUrl()->redirectNow();
 
 /**
 *  SetUrl can also accept an array instead of a request object and you are good to go, it will be in this format
@@ -198,13 +198,13 @@ PayWithBank3D::setUrl()->redirectNow();
 /**
  * This fluent method does all the dirty work of verifying that the just concluded transaction was actually valid,
  */
-PayWithBank3D::getData();
+PayWithBank3DFacade::getData();
 
 /**
  * This method gets the return the redirect url in the case your frontend is detached from your backend
  * @returns array
  */
-PayWithBank3D::setUrl()->getUrl();
+PayWithBank3DFacade::setUrl()->getUrl();
 
 ```
 
