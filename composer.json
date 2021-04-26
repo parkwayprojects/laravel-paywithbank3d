@@ -16,13 +16,13 @@
         }
     ],
     "require": {
-        "php": ">=5.5.9",
-        "illuminate/support": "~5.5|~6.5|^7.0",
-        "guzzlehttp/guzzle": "5.*|6.*",
+        "php": "^7.2",
+        "illuminate/support": "~6|~7|~8",
+        "guzzlehttp/guzzle": "6.*|7.*",
         "ext-json": "*"
     },
     "require-dev": {
-        "orchestra/testbench": "~3.5|~4.4|^5.0"
+        "orchestra/testbench": "~4|~5|^6"
     },
     "autoload": {
         "psr-4": {
